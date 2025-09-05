@@ -1,1 +1,0 @@
-# Jogo-do-Detona-Ralph
