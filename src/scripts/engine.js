@@ -64,7 +64,7 @@ function addListenerHitbox() {
                 state.values.hitPosition = null;
                 playSound("coin");
 
-                if (state.values.result >= 25) {
+                if (state.values.result >= 30) {
                     endGame("Parabéns! Você venceu! " + ". Quer jogar de novo? Atualize a página!!");
                     playSound("win");
                 }
