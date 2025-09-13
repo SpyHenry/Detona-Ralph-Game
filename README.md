@@ -4,10 +4,9 @@ Um jogo interativo inspirado no clássico Detona Ralph! O objetivo é acertar o 
 
 ## ✨ Funcionalidades  
 - 🎯 Sistema de pontuação em tempo real.  
-- ⏳ Tempo limite para desafiar o jogador.  
-- ❤️ Sistema de vidas para aumentar a diversão.  
+- ⏳ Tempo limite.
+- ❤️ Sistema de vidas. 
 - 📱 Design responsivo, funciona em dispositivos móveis.  
-- ⚡ Interatividade fluida e rápida.  
 
 ## 🛠 Tecnologias Usadas  
 - **HTML5** – Estrutura do jogo.  
