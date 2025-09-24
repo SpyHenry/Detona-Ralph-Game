@@ -1,5 +1,8 @@
 ## 💥 DETONA RALPH GAME
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3ab9a1b06328ccdfce0c7d097e3afbed0af11bbd
 - **Hall da Fama**: Top 3 melhores pontuações salvas permanentemente
 - **Nomes Personalizados**: Registre seu nome quando fizer um novo recorde
 - **Armazenamento Local**: Suas conquistas ficam salvas no navegador
