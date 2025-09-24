@@ -1,4 +1,4 @@
-# 💥 DETONA RALPH - The Ultimate Game 🎮
+# 💥 DETONA RALPH 🎮
 
 <div align="center">
   <img src="src/images/preview.png" alt="Preview do Jogo" width="600px">
