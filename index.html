@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="imagex/png" href="/src/images/ralph-head.webp">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./src/styles/reset.css">
+<link rel="stylesheet" href="./src/styles/main.css">
+
+
+    <title>Eu vou detonar!!</title>
+
+</head>
+<body>
+
+    <div class="container">
+        <!-- Tela de Menu Inicial -->
+        <div class="start-screen" id="start-screen">
+            <div class="start-content">
+                <h1>DETONA RALPH</h1>
+                <div class="high-scores">
+                    <h2>🏆 MELHORES PONTUAÇÕES</h2>
+                    <div id="high-scores-list">
+                        <div class="score-item">1º - 0 pontos</div>
+                        <div class="score-item">2º - 0 pontos</div>
+                        <div class="score-item">3º - 0 pontos</div>
+                    </div>
+                </div>
+                <button class="game-button" id="start-button">COMEÇAR JOGO</button>
+            </div>
+        </div>
+
+        <!-- Tela de Game Over -->
+        <div class="game-over-screen" id="game-over-screen">
+            <div class="game-over-content">
+                <h1 id="game-over-title">GAME OVER!</h1>
+                <div class="final-score">
+                    <h2>Sua Pontuação:</h2>
+                    <h1 id="final-score">0</h1>
+                </div>
+                <div id="new-record" class="new-record hidden">
+                     NOVO RECORDE!
+                    <div class="name-input-container">
+                        <h3>Digite seu nome:</h3>
+                        <input type="text" id="player-name" placeholder="Seu nome aqui" maxlength="15">
+                        <button class="game-button small" id="save-score">SALVAR</button>
+                    </div>
+                </div>
+                <div class="game-buttons">
+                    <button class="game-button" id="restart-button">JOGAR NOVAMENTE</button>
+                    <button class="game-button secondary" id="menu-button">VOLTAR AO MENU</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="menu-time">
+                <h2 style="color: red;">Time Left</h2>
+                <h2 id="time-left">60</h2>
+            </div>
+
+            <div class="menu-score">
+                <h2 style="color: red;">Your Score</h2>
+                <h2 id="score">0</h2>
+            </div>
+
+            <div class="menu-lives">
+                <img src="./src/images/player.png" alt="jogador" style="width: 50px; height: 50px;">
+                <h2 id="lives-display">x3</h2>
+            </div>
+
+        </div>
+
+        <div class="panel">
+            <div class="panel-row">
+                <div class="square" id="1"></div>
+                <div class="square" id="2"></div>
+                <div class="square" id="3"></div>
+            </div>
+
+              <div class="panel-row">
+                <div class="square enemy" id="4"></div>
+                <div class="square" id="5"></div>
+                <div class="square" id="6"></div>
+            </div>
+
+              <div class="panel-row">
+                <div class="square" id="7"></div>
+                <div class="square" id="8"></div>
+                <div class="square" id="9"></div>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+    <script defer src="./src/scripts/engine.js"></script>
+
+</body>
+</html>

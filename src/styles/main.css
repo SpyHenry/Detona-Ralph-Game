@@ -1,0 +1,275 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url("../images/wall.png");
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;      
+    align-items: center;
+    height: 90px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    border-bottom: 5px solid rgb(233, 205, 47);
+}
+
+.panel{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.square {
+    height: 150px;
+    width: 150px;
+    border: 1px solid black;
+    background-color: rgb(0, 0, 0);
+    background-image: url("../images/janela.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.enemy {
+   background-image: url("../images/ralph.png");
+   background-size: cover;
+}
+
+.menu-lives {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-time h2:nth-child(2), .menu-score h2:nth-child(2) {
+    margin-top: 1rem;
+}
+
+/* Tela de Menu Inicial */
+.start-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/wall.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.start-content {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 3rem;
+    border-radius: 15px;
+    border: 3px solid rgb(233, 205, 47);
+    text-align: center;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.start-content h1 {
+    font-size: 2.5rem;
+    color: red;
+    margin-bottom: 2rem;
+    text-shadow: 3px 3px 0px #000;
+}
+
+.high-scores {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: rgba(233, 205, 47, 0.1);
+    border: 2px solid rgb(233, 205, 47);
+    border-radius: 10px;
+}
+
+.high-scores h2 {
+    color: red;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.score-item {
+    color: white;
+    margin: 0.5rem 0;
+    font-size: 0.8rem;
+}
+
+/* Tela de Game Over */
+.game-over-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/wall.png");
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.game-over-content {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 3rem;
+    border-radius: 15px;
+    border: 3px solid rgb(233, 205, 47);
+    text-align: center;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.game-over-content h1 {
+    font-size: 2rem;
+    color: red;
+    margin-bottom: 1.5rem;
+    text-shadow: 3px 3px 0px #000;
+}
+
+.final-score {
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: rgba(233, 205, 47, 0.1);
+    border: 2px solid rgb(233, 205, 47);
+    border-radius: 10px;
+}
+
+.final-score h2 {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.final-score h1 {
+    color: rgb(233, 205, 47);
+    font-size: 3rem;
+    text-shadow: 3px 3px 0px #000;
+}
+
+.new-record {
+    color: #ff6b35;
+    font-size: 1rem;
+    margin: 1rem 0;
+    animation: blink 1s infinite;
+}
+
+.name-input-container {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    animation: none;
+}
+
+.name-input-container h3 {
+    color: white;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.name-input-container input {
+    width: 100%;
+    max-width: 200px;
+    padding: 0.8rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.6rem;
+    background-color: black;
+    color: rgb(233, 205, 47);
+    border: 2px solid rgb(233, 205, 47);
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+.name-input-container input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(233, 205, 47, 0.5);
+    background-color: rgba(233, 205, 47, 0.1);
+}
+
+.name-input-container input::placeholder {
+    color: rgba(233, 205, 47, 0.5);
+}
+
+.game-button.small {
+    font-size: 0.6rem;
+    padding: 0.8rem 1.5rem;
+}
+
+.game-buttons {
+    margin-top: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.3; }
+}
+
+/* Botões */
+.game-button {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    background-color: red;
+    color: black;
+    border: 3px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+}
+
+.game-button:hover {
+    background-color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.534);
+}
+
+.game-button:active {
+    transform: scale(0.95);
+}
+
+.game-button.secondary {
+    background-color: transparent;
+    color: rgb(233, 205, 47);
+    border-color: rgb(233, 205, 47);
+}
+
+.game-button.secondary:hover {
+    background-color: rgb(233, 205, 47);
+    color: black;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .start-content, .game-over-content {
+        padding: 2rem;
+        margin: 1rem;
+    }
+    
+    .start-content h1, .game-over-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .final-score h1 {
+        font-size: 2rem;
+    }
+    
+    .game-button {
+        font-size: 0.6rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
