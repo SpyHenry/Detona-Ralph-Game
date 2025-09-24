@@ -1,4 +1,16 @@
-# 💥 DETONA RALPH - The Ultimate Game 🎮
+# 💥 DETONA RALPH - The U### 🏆 Sistema de Ranking Completo
+- **Hall da Fama**: Top 3 melhores pontuações salvas permanentemente
+- **Nomes Personalizados**: Registre seu nome quando fizer um novo recorde
+- **Armazenamento Local**: Suas conquistas ficam salvas no navegador
+
+### 💾 Sistema de Backup Avançado
+- **Export de Placar**: Salve seus recordes em arquivo JSON
+- **Import de Placar**: Restaure recordes de arquivos salvos
+- **Reset Seguro**: Limpe o placar com dupla confirmação
+- **Portabilidade Total**: Leve seus recordes para qualquer lugar
+- **Validação Completa**: Proteção contra arquivos corrompidos
+
+### 🚀 Dificuldade Progressivae Game 🎮
 
 <div align="center">
   <img src="src/images/preview.png" alt="Preview do Jogo" width="600px">
@@ -14,7 +26,7 @@
 
 ## 🌟 Sobre o Projeto
 
-Este projeto foi desenvolvido como parte do bootcamp da [DIO](https://www.dio.me/), mas evoluiu muito além do escopo original! O que começou como um jogo simples se transformou em uma experiência completa com múltiplas telas, sistema de pontuação persistente, dificuldade progressiva e efeitos sonoros imersivos.
+Este projeto foi desenvolvido como parte do bootcamp da [DIO](https://www.dio.me/), mas evoluiu muito além do escopo original! O que começou como um jogo simples se transformou em uma experiência completa com múltiplas telas, sistema de pontuação persistente, dificuldade progressiva, efeitos sonoros imersivos e **sistema avançado de backup de recordes**.
 
 ### 🎯 Objetivo do Jogo
 Teste seus reflexos e velocidade! Acerte o Ralph nas janelas que aparecem aleatoriamente. Quanto mais você joga, mais rápido ele fica. Consegue sobreviver aos 60 segundos e entrar no hall da fama?
@@ -61,6 +73,8 @@ Teste seus reflexos e velocidade! Acerte o Ralph nas janelas que aparecem aleato
 
 ### Recursos Técnicos
 - **LocalStorage API**: Persistência de dados do ranking
+- **File API & Blob**: Sistema completo de export/import
+- **JSON Validation**: Validação robusta de arquivos de backup
 - **Web Audio API**: Sistema de sons sincronizados
 - **CSS Grid/Flexbox**: Layout responsivo e moderno
 - **Event Listeners**: Controle preciso de interações
@@ -94,7 +108,52 @@ detona-ralph-game/
 
 ---
 
-## 🚀 Como Executar
+## � Sistema de Backup do Placar
+
+### 📥 **Exportar Recordes**
+```
+1. Na tela inicial, clique em "📥 EXPORTAR"
+2. Arquivo JSON será baixado automaticamente
+3. Salve o arquivo em local seguro (Dropbox, Drive, etc.)
+```
+
+### 📤 **Importar Recordes**
+```
+1. Na tela inicial, clique em "📤 IMPORTAR"
+2. Selecione seu arquivo de backup (.json)
+3. Confirme a importação dos recordes
+4. Seus recordes antigos voltaram!
+```
+
+### 🗑️ **Resetar Placar**
+```
+1. Na tela inicial, clique em "🗑️ RESETAR"
+2. Confirme DUAS vezes (ação irreversível!)
+3. Placar zerado para novos desafios
+```
+
+### 💡 **Dicas de Backup**
+- **Exporte regularmente** seus melhores recordes
+- **Compartilhe** arquivos com amigos para competir
+- **Migre** entre computadores e navegadores facilmente
+- **Nunca perca** suas conquistas novamente!
+
+### 📁 **Formato do Arquivo**
+```json
+{
+  "highScores": [
+    { "name": "SpyHenry", "score": 150 },
+    { "name": "ProGamer", "score": 120 },
+    { "name": "RalphMaster", "score": 100 }
+  ],
+  "exportDate": "2025-09-24T10:30:00.000Z",
+  "gameVersion": "2.0"
+}
+```
+
+---
+
+## �🚀 Como Executar
 
 ### Opção 1: GitHub Pages
 Acesse diretamente: [**JOGAR AGORA**](https://spyhenry.github.io/Jogo-do-Detona-Ralph/)
@@ -160,6 +219,28 @@ highScores = [
 ]
 ```
 
+### Sistema de Backup Avançado
+```javascript
+// Export para arquivo JSON
+function exportHighScores() {
+  const data = {
+    highScores: state.values.highScores,
+    exportDate: new Date().toISOString(),
+    gameVersion: "2.0"
+  };
+  // Download automático do arquivo
+  const blob = new Blob([JSON.stringify(data, null, 2)], 
+    { type: 'application/json' });
+}
+
+// Import com validação robusta
+function importHighScores(file) {
+  // Validação de estrutura e dados
+  // Confirmação antes de substituir
+  // Tratamento de erros completo
+}
+```
+
 ---
 
 ## 🎵 Áudios Necessários
@@ -171,6 +252,32 @@ Para a experiência completa, adicione estes arquivos na pasta `src/audios/`:
 - `gameover.mp3` - Som de game over 💀
 - `speedup.mp3` - Som de aumento de velocidade 🚀
 - `countdown.mp3` - Som dos últimos 5 segundos ⏰
+
+---
+
+## 🆕 Novidades da Versão 2.0
+
+### 💾 **Sistema de Backup Revolucionário**
+- **Nunca mais perca seus recordes!** Sistema completo de export/import
+- **Portabilidade total** - leve seus recordes para qualquer lugar
+- **Validação robusta** - proteção contra arquivos corrompidos
+- **Interface intuitiva** - botões integrados na tela inicial
+
+### 🎮 **Melhorias de Gameplay**
+- **Dificuldade progressiva** - velocidade aumenta a cada 5 pontos
+- **Sistema de áudio imersivo** - feedback sonoro para cada ação
+- **Countdown dramático** - tensão nos últimos 5 segundos
+- **Controles mobile** - suporte completo para dispositivos touch
+
+### 🏆 **Sistema de Ranking Avançado**
+- **Nomes personalizados** - registre sua identidade nos recordes
+- **Hall da fama persistente** - top 3 melhores pontuações
+- **Novo recorde visual** - animação especial para conquistas
+
+### 🎨 **Interface Profissional**
+- **Design moderno** - estilo retrô com elementos contemporâneos
+- **Múltiplas telas** - menu, jogo e game over integrados
+- **Responsividade total** - funciona perfeitamente em qualquer tela
 
 ---
 

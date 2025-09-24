@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" type="imagex/png" href="/src/images/ralph-head.webp">
+<link rel="shortcut icon" type="imagex/png" href="./src/images/ralph-favicon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,8 +30,16 @@
                         <div class="score-item">2º - 0 pontos</div>
                         <div class="score-item">3º - 0 pontos</div>
                     </div>
+                    <div class="backup-controls">
+                        <button class="backup-button" id="export-button" title="Salvar placar em arquivo">📥 EXPORTAR</button>
+                        <button class="backup-button" id="import-button" title="Carregar placar de arquivo">📤 IMPORTAR</button>
+                        <button class="backup-button danger" id="reset-button" title="Limpar todo o placar">🗑️ RESETAR</button>
+                    </div>
                 </div>
                 <button class="game-button" id="start-button">COMEÇAR JOGO</button>
+                
+                <!-- Input invisível para importar arquivo -->
+                <input type="file" id="import-file" accept=".json" style="display: none;">
             </div>
         </div>
 

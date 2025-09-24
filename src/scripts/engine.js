@@ -18,6 +18,10 @@ const state = {
         highScoresList: document.querySelector("#high-scores-list"),
         playerNameInput: document.querySelector("#player-name"),
         saveScoreButton: document.querySelector("#save-score"),
+        exportButton: document.querySelector("#export-button"),
+        importButton: document.querySelector("#import-button"),
+        resetButton: document.querySelector("#reset-button"),
+        importFile: document.querySelector("#import-file"),
     },
     values: {
         gameVelocity: 1000,
@@ -94,6 +98,103 @@ function saveNewHighScore(playerName, score) {
     saveHighScores();
     updateHighScoresDisplay();
     state.values.pendingScore = null;
+}
+
+// Funções de Backup do Placar
+function exportHighScores() {
+    const data = {
+        highScores: state.values.highScores,
+        exportDate: new Date().toISOString(),
+        gameVersion: "2.0",
+        totalRecords: state.values.highScores.length
+    };
+    
+    const jsonString = JSON.stringify(data, null, 2);
+    const blob = new Blob([jsonString], { type: 'application/json' });
+    
+    // Cria link de download
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `detona-ralph-placar-${new Date().toISOString().split('T')[0]}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    
+    alert('✅ Placar exportado com sucesso!\nArquivo salvo na pasta de Downloads.');
+}
+
+function importHighScores(file) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        try {
+            const data = JSON.parse(e.target.result);
+            
+            // Valida estrutura do arquivo
+            if (!data.highScores || !Array.isArray(data.highScores)) {
+                throw new Error('Formato de arquivo inválido');
+            }
+            
+            // Valida cada registro
+            const validRecords = data.highScores.filter(record => 
+                record && 
+                typeof record.name === 'string' && 
+                typeof record.score === 'number' && 
+                record.score >= 0
+            );
+            
+            if (validRecords.length === 0) {
+                throw new Error('Nenhum registro válido encontrado');
+            }
+            
+            // Confirma importação
+            const currentRecords = state.values.highScores.length;
+            const newRecords = validRecords.length;
+            
+            if (confirm(`🔄 Importar Placar\n\nRecordes atuais: ${currentRecords}\nRecordes do arquivo: ${newRecords}\n\nIsso substituirá todos os recordes atuais. Continuar?`)) {
+                state.values.highScores = validRecords.slice(0, 3);
+                state.values.highScores.sort((a, b) => b.score - a.score);
+                
+                saveHighScores();
+                updateHighScoresDisplay();
+                
+                alert(`✅ Placar importado com sucesso!\n${validRecords.length} recordes carregados.`);
+            }
+            
+        } catch (error) {
+            alert(`❌ Erro ao importar placar:\n${error.message}\n\nVerifique se o arquivo é válido.`);
+        }
+    };
+    
+    reader.readAsText(file);
+}
+
+function resetHighScores() {
+    const currentScores = state.values.highScores;
+    const hasScores = currentScores.some(score => score.score > 0);
+    
+    if (!hasScores) {
+        alert('ℹ️ O placar já está vazio!');
+        return;
+    }
+    
+    const topScore = Math.max(...currentScores.map(s => s.score));
+    
+    if (confirm(`🗑️ Resetar Placar\n\nIsso apagará todos os recordes!\nMelhor pontuação atual: ${topScore} pontos\n\nTem certeza que deseja continuar?`)) {
+        if (confirm('⚠️ ÚLTIMA CONFIRMAÇÃO\n\nEsta ação NÃO pode ser desfeita!\nTodos os recordes serão perdidos.\n\nConfirmar reset?')) {
+            state.values.highScores = [
+                { name: '---', score: 0 },
+                { name: '---', score: 0 },
+                { name: '---', score: 0 }
+            ];
+            
+            saveHighScores();
+            updateHighScoresDisplay();
+            
+            alert('✅ Placar resetado com sucesso!\nTodos os recordes foram apagados.');
+        }
+    }
 }
 
 function countdown() {
@@ -262,6 +363,27 @@ function setupEventListeners() {
         if (e.key === 'Enter') {
             handleSaveScore();
         }
+    });
+    
+    // Event listeners para sistema de backup
+    state.view.exportButton.addEventListener('click', () => {
+        exportHighScores();
+    });
+    
+    state.view.importButton.addEventListener('click', () => {
+        state.view.importFile.click();
+    });
+    
+    state.view.importFile.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            importHighScores(file);
+            e.target.value = ''; // Limpa o input para permitir reimportar o mesmo arquivo
+        }
+    });
+    
+    state.view.resetButton.addEventListener('click', () => {
+        resetHighScores();
     });
 }
 
