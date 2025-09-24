@@ -1,16 +1,5 @@
 ## 💥 DETONA RALPH GAME
 
-- **Hall da Fama**: Top 3 melhores pontuações salvas permanentemente
-- **Nomes Personalizados**: Registre seu nome quando fizer um novo recorde
-- **Armazenamento Local**: Suas conquistas ficam salvas no navegador
-
-### 💾 Sistema de Backup
-- **Export de Placar**: Salve seus recordes em arquivo JSON
-- **Import de Placar**: Restaure recordes de arquivos salvos
-- **Portabilidade Total**: Leve seus recordes para qualquer lugar
-
-### 🚀 Dificuldade Aumentada 🎮
-
 <div align="center">
   <img src="src/images/preview.png" alt="Preview do Jogo" width="600px">
   
@@ -34,11 +23,20 @@ Acerte Ralph nas janelas que aparecem aleatoriamente. Quanto mais você joga, ma
 
 ## ✨ Funcionalidades Principais
 
-### 🚀 Dificuldade Progressiva
+- **Hall da Fama**: Top 3 melhores pontuações salvas permanentemente
+- **Nomes Personalizados**: Registre seu nome quando fizer um novo recorde
+- **Armazenamento Local**: Suas conquistas ficam salvas no navegador
+
+### 💾 Sistema de Backup
+- **Export de Placar**: Salve seus recordes em arquivo JSON
+- **Import de Placar**: Restaure recordes de arquivos salvos
+- **Portabilidade Total**: Leve seus recordes para qualquer lugar
+
+### 🚀 Dificuldade Aumentada 🎮
 
 - **Velocidade Dinâmica**: A cada 5 pontos, o Ralph fica mais rápido
 
-### 🎮 Interface Profissional
+### 🎮 Interface
 - **Tela de Menu**: Interface elegante com ranking dos melhores
 - **Tela de Game Over**: Resultados detalhados e opções de restart
 - **Design Responsivo**: Funciona perfeitamente em desktop e mobile
