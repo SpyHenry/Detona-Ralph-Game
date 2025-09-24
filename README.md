@@ -1,8 +1,5 @@
 ## 💥 DETONA RALPH GAME
-<<<<<<< HEAD
 
-=======
->>>>>>> 3ab9a1b06328ccdfce0c7d097e3afbed0af11bbd
 - **Hall da Fama**: Top 3 melhores pontuações salvas permanentemente
 - **Nomes Personalizados**: Registre seu nome quando fizer um novo recorde
 - **Armazenamento Local**: Suas conquistas ficam salvas no navegador
@@ -136,9 +133,7 @@ Este projeto foi desenvolvido com muito carinho e dedicação!
 
 ---
 
-<div align="center">
-  <strong>🎮 Divirta-se jogando e quebre todos os recordes! 🏆</strong>
-  
+<div align="center">  
   **⭐ Se você gostou do projeto, não esqueça de dar uma estrela no repositório! ⭐**
 </div>
 
