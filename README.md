@@ -25,7 +25,7 @@
 
 ## 🌟 Sobre o Projeto
 
-Este projeto foi desenvolvido como parte do bootcamp da [DIO](https://www.dio.me/), mas evoluiu muito além do escopo original! O que começou como um jogo simples se transformou em uma experiência completa com múltiplas telas, sistema de pontuação persistente, dificuldade progressiva, efeitos sonoros imersivos e **sistema avançado de backup de recordes**.
+Este projeto foi desenvolvido como parte do bootcamp da [DIO](https://www.dio.me/), mas evoluiu muito além do escopo original!
 
 ### 🎯 Objetivo do Jogo
 Acerte Ralph nas janelas que aparecem aleatoriamente. Quanto mais você joga, mais rápido ele fica. Consegue sobreviver aos 60 segundos e entrar no hall da fama?
