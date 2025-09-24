@@ -1,4 +1,4 @@
-# 💥 DETONA RALPH - The U### 🏆 Sistema de Ranking Completo
+## 💥 DETONA RALPH GAME
 - **Hall da Fama**: Top 3 melhores pontuações salvas permanentemente
 - **Nomes Personalizados**: Registre seu nome quando fizer um novo recorde
 - **Armazenamento Local**: Suas conquistas ficam salvas no navegador
