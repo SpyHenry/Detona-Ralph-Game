@@ -91,10 +91,10 @@ Acesse diretamente: [**JOGAR AGORA**](https://spyhenry.github.io/Detona-Ralph-Ga
 ### Opção 2: Local
 ```bash
 # Clone o repositório
-git clone https://github.com/SpyHenry/Jogo-do-Detona-Ralph.git
+git clone https://github.com/SpyHenry/Detona-Ralph-Game.git
 
 # Entre na pasta
-cd Jogo-do-Detona-Ralph
+cd Detona-Ralph-Game
 
 # Abra o index.html no seu navegador preferido
 ```
