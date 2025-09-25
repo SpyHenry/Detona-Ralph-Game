@@ -86,7 +86,7 @@ Acerte Ralph nas janelas que aparecem aleatoriamente. Quanto mais você joga, ma
 ## �🚀 Como Executar
 
 ### Opção 1: GitHub Pages
-Acesse diretamente: [**JOGAR AGORA**](https://spyhenry.github.io/Jogo-do-Detona-Ralph/)
+Acesse diretamente: [**JOGAR AGORA**](https://spyhenry.github.io/Detona-Ralph-Game/)
 
 ### Opção 2: Local
 ```bash
