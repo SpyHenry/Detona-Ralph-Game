@@ -111,16 +111,6 @@ Para a experiência completa, adicione estes arquivos na pasta `src/audios/`:
 
 ---
 
-## 🤝 Contribuições
-
-Sinta-se à vontade para:
-- 🐛 Reportar bugs
-- 💡 Sugerir novas funcionalidades  
-- 🎨 Melhorar o design
-- 📝 Aprimorar a documentação
-
----
-
 ## 📞 Contato
 
 Este projeto foi desenvolvido com muito carinho e dedicação!
