@@ -396,21 +396,33 @@ function handleSaveScore() {
 }
 
 function checkSpeedIncrease() {
-    // A cada 5 pontos, aumenta a velocidade 
+    // Sistema de velocidade equilibrado
+    let newVelocity = state.values.gameVelocity;
 
     if (state.values.result % 5 === 0 && state.values.result > 0) {
+        if (state.values.result <= 20) {
+            // Até 20 pontos: aumenta velocidade normalmente (diminui intervalo)
+            newVelocity = Math.max(500, state.values.gameVelocity - 100);
+        } else if (state.values.result > 20 && state.values.result <= 40) {
+            // Entre 20-40 pontos: mantém velocidade 
+            newVelocity = 500; // Velocidade fixa neste intervalo
+        } else if (state.values.result > 40) {
+            // Após 40 pontos: aumenta velocidade gradualmente
+            const extraSpeed = Math.floor((state.values.result - 40) / 10) * 50;
+            newVelocity = Math.max(200, 500 - extraSpeed);
+        }
 
-        const newVelocity = Math.max(300, state.values.gameVelocity - 100);
-        
         if (newVelocity !== state.values.gameVelocity) {
             state.values.gameVelocity = newVelocity;
-            
+
             clearInterval(state.actions.timerId);
             state.actions.timerId = setInterval(randomSquare, state.values.gameVelocity);
-            
-            playSound("speedup");
-            
-            console.log(`Velocidade aumentada! Novo intervalo: ${state.values.gameVelocity}ms`);
+
+            if (state.values.result <= 20 || state.values.result > 40) {
+                playSound("speedup");
+            }
+
+            console.log(`Pontuação: ${state.values.result} - Velocidade: ${state.values.gameVelocity}ms`);
         }
     }
 }
