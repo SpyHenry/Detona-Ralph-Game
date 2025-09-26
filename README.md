@@ -34,7 +34,7 @@ Acerte Ralph nas janelas que aparecem aleatoriamente. Quanto mais você joga, ma
 
 ### 🚀 Dificuldade Aumentada 🎮
 
-- **Velocidade Dinâmica**: A cada 5 pontos, o Ralph fica mais rápido
+- **Velocidade Dinâmica**: Ralph fica mais rápido gradualmente.
 
 ### 🎮 Interface
 - **Tela de Menu**: Interface elegante com ranking dos melhores
