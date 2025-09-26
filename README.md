@@ -1,16 +1,5 @@
 ## 💥 DETONA RALPH GAME
 
-- **Hall da Fama**: Top 3 melhores pontuações salvas permanentemente
-- **Nomes Personalizados**: Registre seu nome quando fizer um novo recorde
-- **Armazenamento Local**: Suas conquistas ficam salvas no navegador
-
-### 💾 Sistema de Backup
-- **Export de Placar**: Salve seus recordes em arquivo JSON
-- **Import de Placar**: Restaure recordes de arquivos salvos
-- **Portabilidade Total**: Leve seus recordes para qualquer lugar
-
-### 🚀 Dificuldade Aumentada 🎮
-
 <div align="center">
   <img src="src/images/preview.png" alt="Preview do Jogo" width="600px">
   
@@ -25,7 +14,7 @@
 
 ## 🌟 Sobre o Projeto
 
-Este projeto foi desenvolvido como parte do bootcamp da [DIO](https://www.dio.me/), mas evoluiu muito além do escopo original! O que começou como um jogo simples se transformou em uma experiência completa com múltiplas telas, sistema de pontuação persistente, dificuldade progressiva, efeitos sonoros imersivos e **sistema avançado de backup de recordes**.
+Este projeto foi desenvolvido como parte do bootcamp da [DIO](https://www.dio.me/), mas evoluiu muito além do escopo original!
 
 ### 🎯 Objetivo do Jogo
 Acerte Ralph nas janelas que aparecem aleatoriamente. Quanto mais você joga, mais rápido ele fica. Consegue sobreviver aos 60 segundos e entrar no hall da fama?
@@ -34,11 +23,20 @@ Acerte Ralph nas janelas que aparecem aleatoriamente. Quanto mais você joga, ma
 
 ## ✨ Funcionalidades Principais
 
-### 🚀 Dificuldade Progressiva
+- **Hall da Fama**: Top 3 melhores pontuações salvas permanentemente
+- **Nomes Personalizados**: Registre seu nome quando fizer um novo recorde
+- **Armazenamento Local**: Suas conquistas ficam salvas no navegador
 
-- **Velocidade Dinâmica**: A cada 5 pontos, o Ralph fica mais rápido
+### 💾 Sistema de Backup
+- **Export de Placar**: Salve seus recordes em arquivo JSON
+- **Import de Placar**: Restaure recordes de arquivos salvos
+- **Portabilidade Total**: Leve seus recordes para qualquer lugar
 
-### 🎮 Interface Profissional
+### 🚀 Dificuldade Aumentada 🎮
+
+- **Velocidade Dinâmica**: Ralph fica mais rápido gradualmente.
+
+### 🎮 Interface
 - **Tela de Menu**: Interface elegante com ranking dos melhores
 - **Tela de Game Over**: Resultados detalhados e opções de restart
 - **Design Responsivo**: Funciona perfeitamente em desktop e mobile
@@ -88,15 +86,15 @@ Acerte Ralph nas janelas que aparecem aleatoriamente. Quanto mais você joga, ma
 ## �🚀 Como Executar
 
 ### Opção 1: GitHub Pages
-Acesse diretamente: [**JOGAR AGORA**](https://spyhenry.github.io/Jogo-do-Detona-Ralph/)
+Acesse diretamente: [**JOGAR AGORA**](https://spyhenry.github.io/Detona-Ralph-Game/)
 
 ### Opção 2: Local
 ```bash
 # Clone o repositório
-git clone https://github.com/SpyHenry/Jogo-do-Detona-Ralph.git
+git clone https://github.com/SpyHenry/Detona-Ralph-Game.git
 
 # Entre na pasta
-cd Jogo-do-Detona-Ralph
+cd Detona-Ralph-Game
 
 # Abra o index.html no seu navegador preferido
 ```
@@ -113,16 +111,6 @@ Para a experiência completa, adicione estes arquivos na pasta `src/audios/`:
 
 ---
 
-## 🤝 Contribuições
-
-Sinta-se à vontade para:
-- 🐛 Reportar bugs
-- 💡 Sugerir novas funcionalidades  
-- 🎨 Melhorar o design
-- 📝 Aprimorar a documentação
-
----
-
 ## 📞 Contato
 
 Este projeto foi desenvolvido com muito carinho e dedicação!
@@ -133,9 +121,7 @@ Este projeto foi desenvolvido com muito carinho e dedicação!
 
 ---
 
-<div align="center">
-  <strong>🎮 Divirta-se jogando e quebre todos os recordes! 🏆</strong>
-  
+<div align="center">  
   **⭐ Se você gostou do projeto, não esqueça de dar uma estrela no repositório! ⭐**
 </div>
 
